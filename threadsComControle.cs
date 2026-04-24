@@ -8,8 +8,10 @@ class Program
 
     static string[] setores = {
         "Emergencia", "UTI", "Enfermaria", "Radiologia",
-        "CentroCirurgico", "Cardiologia", "Neurologia",
-        "Pediatria", "Ortopedia", "Dermatologia", "Psiquiatria"
+        "Laboratorio", "Farmacia", "CentroCirurgico", "Recepcao",
+        "Cardiologia", "Neurologia", "Pediatria", "Oncologia",
+        "Ortopedia", "Dermatologia", "Psiquiatria", "Nutricao",
+        "Fisioterapia", "Administracao", "TI", "Seguranca"
     };
 
     static void Main()
