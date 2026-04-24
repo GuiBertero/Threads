@@ -33,7 +33,6 @@ class Program
                 {
                     string log = $"{DateTime.Now:HH:mm:ss.fff} | {setores[id]} | Paciente {rnd.Next(1000, 9999)} | Evento {j}";
 
-                    // ❌ SEM CONTROLE
                     File.AppendAllText(caminho, log + "\n");
 
                     Console.WriteLine(log);
