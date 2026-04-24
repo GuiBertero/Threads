@@ -7,12 +7,15 @@ class Program
     static object locker = new object();
 
     static string[] setores = {
-        "Emergencia", "UTI", "Enfermaria", "Radiologia", "CentroCirurgico", "Cardiologia", "Neurologia", "Pediatria", "Ortopedia", "Dermatologia", "Psiquiatria"
+        "Emergencia", "UTI", "Enfermaria", "Radiologia",
+        "CentroCirurgico", "Cardiologia", "Neurologia",
+        "Pediatria", "Ortopedia", "Dermatologia", "Psiquiatria"
     };
 
     static void Main()
     {
-        string caminho = "hospital_com_lock.txt";
+        string desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+        string caminho = Path.Combine(desktop, "hospital_com_lock.txt");
 
         if (File.Exists(caminho))
             File.Delete(caminho);
@@ -47,6 +50,7 @@ class Program
         foreach (var t in threads)
             t.Join();
 
-        Console.WriteLine("\nFinalizado COM controle.");
+        Console.WriteLine("\n Finalizado COM controle.");
+        Console.WriteLine(" Arquivo salvo na área de trabalho");
     }
-}	
+}
